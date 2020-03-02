@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        main{
+            padding: 2em 4em;
+        }
+        .container{
+            display: grid;
+            grid-template: repeat(8, 90px) / repeat(5, 1fr);
+            font-size: 0.8em;
+            border: 0.1em black solid;
+        }
+        .container>div{
+            display: flex;
+            flex-direction: column;
+        }
+        div header{
+            display: flex;
+            flex-direction: column;
+        }
+        .caixa_img {
+            flex-grow: 1;
+            overflow: hidden;
+            padding: 10px 10px 0 10px;
+        }
+        .caixa_img img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .container header{
+            height: 20px;
+            padding: 0 10px 10px 10px;
+        }
+        header{
+            text-align: center;
+        }
+        .item-1{
+            border-right: 0 0 1px 1px solid black;
+            border-bottom: 0 0 1px 1px solid black;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+        .item-2{
+            border-right: 0 0 1px 1px solid black;
+            border-bottom: 0 0 1px 1px solid black;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .item-3{
+            border-right: 0 0 1px 1px solid black;
+            border-bottom: 0 0 1px 1px solid black;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .item-4{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .item-5{
+            grid-column-start: 4;
+            grid-column-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+        .item-6{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 5;
+            grid-row-end: 6; 
+        }
+        .item-7{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 7;
+        }
+        .item-8{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+        .item-9{
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 9;
+        }
+        .item-10{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 5;
+            grid-row-end: 9;
+        }
+        .item-11{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 7;
+            grid-row-end: 9;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item-1">
+                <div class="caixa-img">
+                    <img src="img/Aesop_07.jpg" alt="">
+                </div>
+                <header>
+                    <h3>kyoto</h3>
+                    <h4>kyoto, japan</h4>
+                </header>
+            </div>
+            <div class="item-2">
+                <div class="caixa-img">
+                    <img src="img/Aesop_09.jpg" alt="">
+                </div>
+                <header>
+                    <h3>marble</h3>
+                    <h4>saint-suplice, france</h4>
+                </header>
+            </div>
+            <div class="item-3">
+                <div class="caixa-img">
+                    <img src="img/Aesop_14.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Waxed Concrete</h3>
+                    <h4>Tiquetonne, France</h4>
+                </header>
+            </div>
+            <div class="item-4">
+                <div class="caixa-img">
+                    <img src="img/Aesop_11.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Snoetta</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-5">
+                <div class="caixa-img">
+                    <img src="#" alt="">
+                </div>
+                <header>
+                    <h3>John Randolph</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-6">
+                <div class="caixa-img">
+                    <img src="img/Aesop_30_20.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Studio Ilse</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-7">
+                <div class="caixa-img">
+                    <img src="img/Aesop_20.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Blackened Steel</h3>
+                    <h4>Newbury street, USA</h4>
+                </header>
+            </div>
+            <div class="item-8">
+                <div class="caixa-img">
+                    <img src="img/Aesop_25.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Sisal Flooring</h3>
+                    <h4>Genava, Switzerland</h4>
+                </header>
+            </div>
+            <div class="item-9">
+                <div class="caixa-img">
+                    <img src="img/Aesop_22.jpg" alt="">
+                </div>
+                <header>
+                    <h3>The paris review</h3>
+                    <h4>Chelsea, USA</h4>
+                </header>
+            </div>
+            <div class="item-10">
+                <div class="caixa-img">
+                    <img src="img/Aesop_23.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Henry Wilson Studios</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-11">
+                <div class="caixa-img">
+                    <img src="img/Aesop_28.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Coconut husk Fringing</h3>
+                    <h4>Millenia walk, Singapure</h4>
+                </header>
+            </div>
+        </div> 
+    </main>
+</body>
+</html>
